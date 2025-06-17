@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My E-commerce Site</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Cart Indicator -->
+    <div id="cart-indicator" style="position: fixed; top: 20px; right: 20px; background: var(--color-forest-green); color: var(--color-ivory-cream); padding: 10px 15px; border-radius: 8px; z-index: 1000; font-family: var(--font-ui); font-size: 0.875rem;">
+      Cart: <span id="cart-item-count">0</span>
+    </div>
+
+    <header>
+        <p>Header Content (Imagine Nav Bar, Logo etc.)</p>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="hero-content-panel">
+                <h1 class="hero-headline">Ethical Meats, Uncompromised Quality</h1>
+                <p class="hero-subtext">Experience farm-to-table freshness, delivered to your door.</p>
+                <div class="hero-cta-buttons">
+                    <a href="#" class="btn-primary">Shop Our Cuts</a>
+                    <a href="#" class="btn-secondary">Learn Our Story</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="featured-collection">
+            <h2 class="section-headline">Featured Collections</h2>
+            <p>This is the featured collection section. (Content to be defined, e.g., four square image cards)</p>
+        </section>
+
+        <!-- Filter & Sort UI (Conceptual Placement) -->
+        <div style="display: flex; gap: 20px; padding: 0 20px;">
+            <aside id="filter-sort-sidebar" style="padding: 20px; background: var(--color-warm-taupe); flex-shrink: 0; width: 220px; border-radius: 8px;">
+              <h3 style="font-family: var(--font-ui); color: var(--color-forest-green);">Filter By</h3>
+              <p style="font-size: 0.9rem;">Cut, Weight, Price...</p>
+              <h3 style="font-family: var(--font-ui); color: var(--color-forest-green); margin-top: 20px;">Sort By</h3>
+              <p style="font-size: 0.9rem;">Popularity, Price...</p>
+            </aside>
+
+            <section id="product-grid" style="flex-grow: 1;"> <!-- Ensure product-grid takes remaining space -->
+                <h2 class="section-headline">Our Products</h2>
+                <div class="collection-grid">
+                    <div class="product-card">
+                        <div class="product-badges" style="position: absolute; top: 10px; left: 10px; display: flex; flex-direction: column; gap: 5px; z-index: 3;">
+                          <span class="badge badge-new" style="background: var(--color-dusty-rose); color: white; padding: 3px 6px; font-size: 0.75rem; border-radius: 4px; font-family: var(--font-ui);">New</span>
+                          <span class="badge badge-halal" style="background: var(--color-forest-green); color: white; padding: 3px 6px; font-size: 0.75rem; border-radius: 4px; font-family: var(--font-ui);">Halal</span>
+                        </div>
+                        <img src="images/product-placeholder-cream-bg.jpg" alt="Product Title 1" class="product-card-image">
+                        <h3 class="product-card-title">Product Title 1</h3>
+                        <p class="product-card-price">$19.99</p>
+                        <button class="btn-primary btn-add-to-cart-overlay">Add to Cart</button>
+                        <!-- <button class="btn-quick-view" style="margin-top: 5px; font-size: 0.8rem; padding: 5px 10px;">Quick View</button> -->
+                    </div>
+                    <div class="product-card">
+                        <img src="images/product-placeholder-cream-bg.jpg" alt="Product Title 2" class="product-card-image">
+                        <h3 class="product-card-title">Product Title 2</h3>
+                        <p class="product-card-price">$29.99</p>
+                        <button class="btn-primary btn-add-to-cart-overlay">Add to Cart</button>
+                    </div>
+                    <div class="product-card">
+                         <div class="product-badges" style="position: absolute; top: 10px; left: 10px; display: flex; flex-direction: column; gap: 5px; z-index: 3;">
+                          <span class="badge badge-halal" style="background: var(--color-forest-green); color: white; padding: 3px 6px; font-size: 0.75rem; border-radius: 4px; font-family: var(--font-ui);">Halal</span>
+                        </div>
+                        <img src="images/product-placeholder-cream-bg.jpg" alt="Product Title 3" class="product-card-image">
+                        <h3 class="product-card-title">Product Title 3</h3>
+                        <p class="product-card-price">$39.99</p>
+                        <button class="btn-primary btn-add-to-cart-overlay">Add to Cart</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="images/product-placeholder-cream-bg.jpg" alt="Product Title 4" class="product-card-image">
+                        <h3 class="product-card-title">Product Title 4</h3>
+                        <p class="product-card-price">$49.99</p>
+                        <button class="btn-primary btn-add-to-cart-overlay">Add to Cart</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Upsell & Cross-sell Section -->
+        <section id="upsell-cross-sell" style="padding: 20px; background: var(--color-warm-taupe); margin-top: 20px;">
+          <h2 class="section-headline" style="text-align:center; color: var(--color-forest-green);">Customers Also Bought</h2>
+          <div style="display: flex; gap: 15px; overflow-x: auto; padding: 20px 0;">
+            <div class="product-card" style="min-width: 220px; flex-basis: 220px;"> <!-- Added flex-basis -->
+                <img src="images/product-placeholder-cream-bg.jpg" alt="Upsell Product A" class="product-card-image" style="height:150px;">
+                <h3 class="product-card-title" style="font-size: 1rem;">Product A</h3>
+                <p class="product-card-price">$15.99</p>
+                <button class="btn-primary btn-add-to-cart-overlay" style="font-size:0.8rem; padding:8px 16px;">Add to Cart</button>
+            </div>
+            <div class="product-card" style="min-width: 220px; flex-basis: 220px;">
+                <img src="images/product-placeholder-cream-bg.jpg" alt="Upsell Product B" class="product-card-image" style="height:150px;">
+                <h3 class="product-card-title" style="font-size: 1rem;">Product B</h3>
+                <p class="product-card-price">$25.99</p>
+                <button class="btn-primary btn-add-to-cart-overlay" style="font-size:0.8rem; padding:8px 16px;">Add to Cart</button>
+            </div>
+            <div class="product-card" style="min-width: 220px; flex-basis: 220px;">
+                <img src="images/product-placeholder-cream-bg.jpg" alt="Upsell Product C" class="product-card-image" style="height:150px;">
+                <h3 class="product-card-title" style="font-size: 1rem;">Product C</h3>
+                <p class="product-card-price">$35.99</p>
+                <button class="btn-primary btn-add-to-cart-overlay" style="font-size:0.8rem; padding:8px 16px;">Add to Cart</button>
+            </div>
+             <div class="product-card" style="min-width: 220px; flex-basis: 220px;">
+                <img src="images/product-placeholder-cream-bg.jpg" alt="Upsell Product D" class="product-card-image" style="height:150px;">
+                <h3 class="product-card-title" style="font-size: 1rem;">Product D</h3>
+                <p class="product-card-price">$45.99</p>
+                <button class="btn-primary btn-add-to-cart-overlay" style="font-size:0.8rem; padding:8px 16px;">Add to Cart</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Promotional Banners -->
+        <section id="promo-banners" style="padding: 30px 20px; background: var(--color-dusty-rose); text-align: center; color: var(--color-ivory-cream); margin-top: 20px;">
+          <h3 style="font-family: var(--font-h1); font-size: 2rem; margin-bottom: 10px;">Special Offer!</h3>
+          <p style="font-family: var(--font-body); font-size: 1.1rem;">Free shipping on orders over $100!</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Footer Content (Copyright, Links, etc.)</p>
+        <div class="trust-signals" style="text-align: center; padding: 20px; background-color: var(--color-warm-taupe); border-top: 1px solid var(--color-rich-chocolate);">
+          <p style="margin-bottom:10px; font-family: var(--font-ui); color: var(--color-rich-chocolate);">Secure Checkout | Halal Certified Products</p>
+          <img src="assets/placeholder-ssl-badge.png" alt="SSL Secured" style="height: 40px; margin: 0 10px; vertical-align: middle;">
+          <img src="assets/placeholder-halal-badge.png" alt="Halal Certified" style="height: 40px; margin: 0 10px; vertical-align: middle;">
+        </div>
+    </footer>
+
+    <!-- Quick View Modal -->
+    <div id="quick-view-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 1001; align-items: center; justify-content: center; backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px);">
+      <div class="modal-content" style="background: var(--color-ivory-cream); padding: 30px; border-radius: 8px; width: 90%; max-width: 600px; position: relative; box-shadow: 0 5px 25px rgba(0,0,0,0.2); text-align: center;">
+        <h3 style="font-family: var(--font-h2); color: var(--color-forest-green); margin-bottom:15px;">Quick View: Product Title</h3>
+        <p style="margin-bottom:20px;">More detailed product information, options for weight/quantity, and larger images would go here.</p>
+        <button id="close-quick-view" style="position: absolute; top: 15px; right: 15px; background: transparent; border: none; font-size: 1.5rem; color: var(--color-rich-chocolate); cursor: pointer;">&times;</button>
+        <button class="btn-primary" style="min-width: 200px;">Add to Cart</button>
+      </div>
+    </div>
+
+    <!-- Sticky Add to Cart (Conceptual for PDP - Not active on this page) -->
+    <!--
+    <div id="sticky-add-to-cart" style="position: fixed; bottom: 0; left: 0; width: 100%; background: var(--color-forest-green); padding: 15px; box-shadow: 0 -2px 10px rgba(0,0,0,0.1); z-index: 999; display: none;">
+      <button class="btn-primary" style="width: 80%; margin: auto; display: block;">Add to Cart</button>
+    </div>
+    -->
+
+    <script src="js/script.js"></script>
+</body>
+</html>
