@@ -1,0 +1,14 @@
+{
+  "name": "web-project",
+  "version": "1.0.0",
+  "description": "A web project with HTML, CSS, and JavaScript",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx vite --port 3000",
+    "build": "npx vite build",
+    "preview": "npx vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+}
